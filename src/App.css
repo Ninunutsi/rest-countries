@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
+  padding: 30px 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
   display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.search input {
+  height: 40px;
+  width: 350px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 23px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+}
+
+.search button {
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(219, 219, 219);
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s;
+}
+
+.country-main {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.country-main .country {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.country-details {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  text-align: center;
   flex-direction: column;
+  width: 40%;
+}
+
+.country-details span {
+  font-weight: bold;
+}
+
+.country-details h1 {
+  font-size: 25px;
+}
+
+.pagination {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.country img {
+  width: 90%;
+  max-height: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.paginate-button {
+  border: none;
+  color: rgb(21, 21, 21);
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.paginate-button.active,
+.paginate-button:focus {
+  text-decoration: underline;
+  font-weight: bold;
 }
